@@ -1,0 +1,300 @@
+/* Main Styles */
+:root {
+    --primary: #0D6EFD;
+    --primary-dark: #0b5ed7;
+    --secondary: #20c997;
+    --secondary-dark: #1ba87e;
+    --success: #198754;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #0dcaf0;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+}
+
+/* Body Page Styles */
+.body-page {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 100px; /* Sesuaikan dengan tinggi header */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--gray-800);
+  line-height: 1.5;
+  padding-bottom: 50px;
+}
+
+/* Background Image */
+.body-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/login-1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4; /* Opacity gambar background */
+  z-index: -2;
+}
+
+/* Blue Overlay */
+.body-page::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #74a8f6;
+  opacity: 0.7; /* Opacity overlay biru */
+  z-index: -1;
+}
+
+/* Main Content Area */
+.main-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding-top: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 12px rgba(240, 237, 237, 0.1);
+}
+
+
+/* Adjust padding for dashboard title */
+.dashboard-title {
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+
+.auth-container {
+    max-width: 450px;
+    margin:-150px;;
+    padding-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.student-card {
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    border-radius: 4px;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: lightgray;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+
+    background-color: rgb(91, 170, 219);
+    border-color:rgb(7, 2, 53);
+    color: white;
+
+}
+
+.btn-secondary:hover {
+    background-color: rgb(118, 199, 231);
+    border-color: rgb(7, 2, 53);
+}
+
+.btn-primarys {
+    background-color: rgb(91, 170, 219);
+    border-color: rgb(95, 150, 236);
+    color: white;
+    
+}
+
+.btn-primarys:hover {
+    background-color: rgb(118, 199, 231);
+    border-color: rgb(7, 2, 53);
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.dashboard-card {
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.action-icon {
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.action-icon:hover {
+    background-color: var(--gray-200);
+}
+
+.page-header {
+    padding: 24px 0;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--gray-300);
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Animation for form submission */
+@keyframes submitPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn-submit {
+    animation: submitPulse 0.3s ease-in-out;
+}
+
+/* Custom styles for validation */
+.is-invalid {
+    border-color: var(--danger) !important;
+}
+
+.invalid-feedback {
+    color: var(--danger);
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* History log styles */
+.history-item {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    background-color: white;
+    border-left: 4px solid var(--primary);
+}
+
+.search-result-highlight {
+    background-color: rgba(255, 193, 7, 0.2);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Overlay layer for login page */
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 100px; /* Adjusted for header */
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #74a8f6;
+  opacity: 0.3; /* Blue overlay opacity */
+  z-index: -1;
+  padding-top: 10px;
+}
+
+/* Background image for login page */
+.login-page {
+  background-image: url('../img/login-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 80px;
+}
+
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: white; /* Atau warna background navbar */
+    padding-top: 10px;
+    box-shadow: 0 24x 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container {
+  max-width: 500px;
+  margin:0 auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Gaya umum untuk semua link navbar */
+.navbar-nav .nav-link {
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Hover effect untuk semua nav-link */
+.navbar-nav .nav-link:hover {
+    background-color: #f0f0f0;
+    color: #0d6efd;
+    font-weight: 500;
+}
+
+/* Aktif (halaman saat ini) */
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: black;
+    background-color: #e9f2ff;
+}
